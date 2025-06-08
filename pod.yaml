@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: cart-app-prod
-  nameespace: imran-ns
+  namespace: imran-ns
 spec:
   containers: 
    - name: test-container
