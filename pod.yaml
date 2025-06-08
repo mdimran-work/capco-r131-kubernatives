@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: Cart-app-prod
+spec:
+  containers: 
+   - name: test-containers
+     image: docker pull imranwork/sre-test-image:1.0
+     ports:
+      - containerport: 3015  
