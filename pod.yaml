@@ -7,4 +7,4 @@ spec:
    - name: test-container
      image: imranwork/sre-test-image:1.0
      ports:
-      - containerport: 3015  
+       - containerPort: 3015
