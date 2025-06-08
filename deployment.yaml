@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flower-app-deployment
+spec: # it define behavior of the deployment
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template: # it define the pod template
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: flower-container
+        image: imranwork/sre-test-image:1.0
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "300m"
+          requests:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 3015
